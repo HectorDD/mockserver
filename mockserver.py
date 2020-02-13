@@ -7,8 +7,6 @@ t=SuccessTemplate('existeUsuario',{'identificacion':'122333'},{'result':'success
 te=DefaultTemplate('existeUsuario',{'result':'success','status':'false'})
 mockResponder=MockResponder([t],[te])
 
-@app.route('/<path:path>')
-
 @app.route('/', defaults={'path': ''})
 @app.route('/<path:path>')
 def catch_all(path):
