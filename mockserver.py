@@ -12,7 +12,7 @@ mockResponder=MockResponder([t],[te])
 def catch_all(path):
     print(path)
     print(request.json)
-    return mockResponder.executeQuery(path,request.json)
+    return jsonify(mockResponder.executeQuery(path,request.json))
 
 if __name__ == '__main__':
     app.run(host= '0.0.0.0',port=8034)
